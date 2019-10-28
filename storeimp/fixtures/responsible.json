@@ -1,0 +1,222 @@
+[
+  {
+    "uid": "8a48d4b5-16d3-4024-931f-d79bc35bc3dc",
+    "name": "Brock",
+    "surname": "Golden",
+    "email": "Brock.Golden@gmail.com",
+    "telephone": "+1 (820) 532-2023",
+    "address": "Jerome Street",
+    "city": "Maplewood",
+    "zip": " 63571",
+    "role": "responsible"
+  },
+  {
+    "uid": "4ab97fbe-042d-4379-8acb-805e6404a301",
+    "name": "Waller",
+    "surname": "Juarez",
+    "email": "Waller.Juarez@gmail.com",
+    "telephone": "+1 (928) 520-2367",
+    "address": "Dobbin Street",
+    "city": "Defiance",
+    "zip": " 56228",
+    "role": "responsible"
+  },
+  {
+    "uid": "7498d6ea-7b4b-4962-9bb2-a9d23587a131",
+    "name": "Copeland",
+    "surname": "Byers",
+    "email": "Copeland.Byers@gmail.com",
+    "telephone": "+1 (998) 490-2476",
+    "address": "Glenwood Road",
+    "city": "Sparkill",
+    "zip": " 61666",
+    "role": "responsible"
+  },
+  {
+    "uid": "fecc465c-f3fa-48e8-9548-da70bc54ed70",
+    "name": "Lucas",
+    "surname": "Ray",
+    "email": "Lucas.Ray@gmail.com",
+    "telephone": "+1 (833) 486-3612",
+    "address": "Troutman Street",
+    "city": "Soham",
+    "zip": " 30861",
+    "role": "dpo"
+  },
+  {
+    "uid": "f51ebbe2-a24c-4f9e-9c3a-401c8f15e430",
+    "name": "Booth",
+    "surname": "Mccall",
+    "email": "Booth.Mccall@gmail.com",
+    "telephone": "+1 (946) 525-3708",
+    "address": "Krier Place",
+    "city": "Ezel",
+    "zip": " 77227",
+    "role": "responsible"
+  },
+  {
+    "uid": "83556ca5-b1a0-4eba-96e1-b5a0544b9561",
+    "name": "Medina",
+    "surname": "Quinn",
+    "email": "Medina.Quinn@gmail.com",
+    "telephone": "+1 (924) 571-3419",
+    "address": "Locust Avenue",
+    "city": "Grandview",
+    "zip": " 57334",
+    "role": "dpo"
+  },
+  {
+    "uid": "d3f2f7f0-1733-4452-a67f-285f6ec01d5a",
+    "name": "Calderon",
+    "surname": "Hardin",
+    "email": "Calderon.Hardin@gmail.com",
+    "telephone": "+1 (822) 520-2174",
+    "address": "Hubbard Place",
+    "city": "Kilbourne",
+    "zip": " 21047",
+    "role": "responsible"
+  },
+  {
+    "uid": "55b58d1e-93c9-4b31-9800-69afe0c7433c",
+    "name": "Porter",
+    "surname": "Cote",
+    "email": "Porter.Cote@gmail.com",
+    "telephone": "+1 (866) 554-3306",
+    "address": "Canarsie Road",
+    "city": "Fredericktown",
+    "zip": " 78946",
+    "role": "responsible"
+  },
+  {
+    "uid": "7055fec4-2c39-4a5a-b496-49cbd321bf9d",
+    "name": "Ines",
+    "surname": "Nichols",
+    "email": "Ines.Nichols@gmail.com",
+    "telephone": "+1 (851) 427-3957",
+    "address": "Union Street",
+    "city": "Heil",
+    "zip": " 20329",
+    "role": "dpo"
+  },
+  {
+    "uid": "bcd34427-e8d9-4f1c-ad4e-2291f7b56ebb",
+    "name": "Savage",
+    "surname": "Carson",
+    "email": "Savage.Carson@gmail.com",
+    "telephone": "+1 (948) 426-2386",
+    "address": "Chestnut Street",
+    "city": "Statenville",
+    "zip": " 26626",
+    "role": "dpo"
+  },
+  {
+    "uid": "384dd1cb-bfa1-4cb4-b1e6-9cecd2e8d9ac",
+    "name": "Burgess",
+    "surname": "Ochoa",
+    "email": "Burgess.Ochoa@gmail.com",
+    "telephone": "+1 (982) 476-2675",
+    "address": "Stewart Street",
+    "city": "Gilgo",
+    "zip": " 20293",
+    "role": "responsible"
+  },
+  {
+    "uid": "58afb1cf-20b9-4256-abe7-60716e3b79c6",
+    "name": "Wilder",
+    "surname": "Camacho",
+    "email": "Wilder.Camacho@gmail.com",
+    "telephone": "+1 (805) 525-2303",
+    "address": "Danforth Street",
+    "city": "Juarez",
+    "zip": " 95527",
+    "role": "dpo"
+  },
+  {
+    "uid": "5f17b924-7ce0-4c0c-a03c-8beb461b613f",
+    "name": "Lizzie",
+    "surname": "Murray",
+    "email": "Lizzie.Murray@gmail.com",
+    "telephone": "+1 (901) 558-2117",
+    "address": "Oakland Place",
+    "city": "Nipinnawasee",
+    "zip": " 20329",
+    "role": "incharge"
+  },
+  {
+    "uid": "4c6d16fe-dc75-4d8c-92f7-fce7cf7fb40d",
+    "name": "Oneill",
+    "surname": "Gould",
+    "email": "Oneill.Gould@gmail.com",
+    "telephone": "+1 (998) 581-3797",
+    "address": "Central Avenue",
+    "city": "Sanborn",
+    "zip": " 52238",
+    "role": "dpo"
+  },
+  {
+    "uid": "19075981-f5a2-4050-9594-b078dd2d62fb",
+    "name": "Hood",
+    "surname": "Schultz",
+    "email": "Hood.Schultz@gmail.com",
+    "telephone": "+1 (888) 405-3064",
+    "address": "Ide Court",
+    "city": "Wadsworth",
+    "zip": " 77768",
+    "role": "incharge"
+  },
+  {
+    "uid": "04b62e63-2483-47a0-92b4-82738f04a771",
+    "name": "Susie",
+    "surname": "Elliott",
+    "email": "Susie.Elliott@gmail.com",
+    "telephone": "+1 (875) 552-3495",
+    "address": "Barwell Terrace",
+    "city": "Cumberland",
+    "zip": " 46552",
+    "role": "dpo"
+  },
+  {
+    "uid": "9f5334af-1e60-4ca8-abef-6c1dd9e482c8",
+    "name": "Lucia",
+    "surname": "Bender",
+    "email": "Lucia.Bender@gmail.com",
+    "telephone": "+1 (960) 495-2934",
+    "address": "Judge Street",
+    "city": "Belgreen",
+    "zip": " 65782",
+    "role": "dpo"
+  },
+  {
+    "uid": "4928f851-d8a0-442f-b2f3-acfda5932bdf",
+    "name": "Nola",
+    "surname": "Clayton",
+    "email": "Nola.Clayton@gmail.com",
+    "telephone": "+1 (924) 461-3292",
+    "address": "Joralemon Street",
+    "city": "Tuskahoma",
+    "zip": " 60400",
+    "role": "responsible"
+  },
+  {
+    "uid": "8e23dcf3-c940-4e38-8eba-ccd3d3a6fc87",
+    "name": "Sheri",
+    "surname": "Walters",
+    "email": "Sheri.Walters@gmail.com",
+    "telephone": "+1 (993) 465-3624",
+    "address": "Duffield Street",
+    "city": "Callaghan",
+    "zip": " 36022",
+    "role": "responsible"
+  },
+  {
+    "uid": "61b9780e-f87f-41de-8d3b-92b041ff331b",
+    "name": "Silvia",
+    "surname": "Kelley",
+    "email": "Silvia.Kelley@gmail.com",
+    "telephone": "+1 (856) 559-2508",
+    "address": "Bainbridge Street",
+    "city": "Babb",
+    "zip": " 15785",
+    "role": "responsible"
+  }
+]

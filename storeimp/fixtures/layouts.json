@@ -1,0 +1,12 @@
+[
+  {"code":"default",
+    "logo": "",
+    "text": {
+      "it": "html text italiano",
+      "en": "html text inglese",
+      "de": "html text tedesco"
+    },
+    "domain": "",
+    "termid": ""
+  }
+]

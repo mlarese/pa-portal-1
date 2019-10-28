@@ -1,0 +1,282 @@
+@import "../node_modules/vue-wysiwyg/dist/vueWysiwyg.css";
+.page-enter-active, .page-leave-active {
+    transition: opacity .5s;
+}
+.page-enter, .page-leave-to {
+    opacity: 0;
+}
+
+.editr--toolbar a svg {
+    width: 13px;
+    height: 13px;
+    margin: 8px auto;
+}
+
+.tabs__bar, .tabs {
+    background: transparent !important;
+}
+
+.btn--round {
+    border-radius: 4px;
+}
+
+.btn--active {
+}
+
+
+a, a:link, a:visited, a:active, a:hover {
+    border:0 ;
+    text-decoration: none;
+}
+
+.elevation-1 {
+    -webkit-box-shadow: 0px 1px 1px -1px rgba(0, 0, 0, .2), 0px 1px 1px 0px rgba(0, 0, 0, .14), 0px 1px 1px 0px rgba(0, 0, 0, .12) !important;
+    box-shadow: 0px 1px 1px -1px rgba(0, 0, 0, .2), 0px 1px 1px 0px rgba(0, 0, 0, .14), 0px 1px 1px 0px rgba(0, 0, 0, .12) !important;
+}
+.btn {
+    font-size: 12px;
+}
+
+.toolbar__side-icon .icon {
+    font-size: 20px !important;
+}
+
+.input-group--text-field input,
+.input-group--text-field textarea {
+    font-size: 14px;
+}
+
+.input-group label {
+    font-size: 14px;
+}
+.text-box-search label{
+    padding-left:10px;
+}
+
+.text-box-search input{
+    padding-left:10px;
+}
+
+.form-header{
+    border-bottom: 2px solid black;
+}
+
+.el-input.is-disabled .el-input__inner {
+    background-color: transparent !important;
+    color: #565656;
+}
+
+.datatable td .btn--icon {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.input-group {
+    padding:12px 0 0;
+}
+
+.input-group--text-field-box:not(.input-group--textarea):not(.input-group--multi-line) label {
+    top: 10px !important;
+}
+
+.input-group--text-field-box .input-group__input, .input-group__input {
+    min-height: 38px;
+}
+
+form {margin-top:6px}
+
+.input-group--text-field input, .input-group--text-field textarea {
+    font-size: 12px;
+}
+
+.input-group--select .input-group__selections__comma {
+    font-size: 12px;
+}
+
+.input-group label {
+    font-size: 12px;
+}
+
+.title {
+    font-size: 18px !important;
+}
+
+.theme--dark .btn.btn--disabled:not(.btn--icon):not(.btn--flat), .application .theme--dark.btn.btn--disabled:not(.btn--icon):not(.btn--flat) {
+    background-color: #e1e1e1 !important;
+}
+.application .theme--dark.btn.btn--disabled {
+    color: rgba(255, 255, 255, 1) !important;
+}
+
+.input-group--text-field-box:not(.input-group--textarea):not(.input-group--single-line).input-group--focused label, .input-group--text-field-box:not(.input-group--textarea):not(.input-group--single-line).input-group--dirty label {
+    -webkit-transform: translate(0, -10px) scale(0.75);
+    transform: translate(0, -3px) scale(0.75);
+}
+
+.theme--light .card, .application .theme--light.card {
+   background: #f6f6f6
+}
+
+.btn--floating.btn--small {
+    height: 30px;
+    width: 30px;
+}
+
+.btn--floating:not(.btn--depressed) {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.input-group.input-group--solo .input-group__input {
+    padding: 0px 8px;
+}
+
+.input-group--text-field-box .input-group__details:before, .input-group--text-field-box .input-group__details:after {
+    height: 0px;
+}
+
+.input-group--text-field-box:not(.input-group--textarea):not(.input-group--multi-line) .input-group__input {
+    border: 1px solid #e2e2e2;
+}
+
+.list__tile {
+    font-size: 14px;
+    height: 22px;
+}
+
+.input-group.input-group--selection-controls.switch label {
+    padding-top: 4px;
+    padding-left: 8px;
+    font-weight: bold;
+}
+
+.input-group--select label {
+    top: 8px !important;
+    left:4px;
+}
+
+.input-group--select.input-group--dirty label {
+    top: 12px !important;
+    left:4px;
+}
+
+.input-group--select .input-group__input{
+    background: white;
+}
+
+.input-group--select .input-group__selections {
+    margin-left:5px;
+}
+
+.theme--light .input-group:not(.input-group--error) .input-group__details:before, .application .theme--light.input-group:not(.input-group--error) .input-group__details:before{
+    height: 0px !important;
+}
+
+.theme--light .input-group input:disabled, .application .theme--light.input-group input:disabled, .theme--light .input-group textarea:disabled, .application .theme--light.input-group textarea:disabled {
+    color: black !important;
+    opacity: 0.7 !important;
+}
+
+.btn--bottom.btn--absolute {
+    bottom: 4px;
+}
+
+.app-tolbar {
+    padding-right :0 !important;
+}
+
+.theme--light .input-group:not(.input-group--error).input-group--disabled label, .application .theme--light.input-group:not(.input-group--error).input-group--disabled label, .theme--light .input-group:not(.input-group--error).input-group--disabled .input-group__selections__comma, .application .theme--light.input-group:not(.input-group--error).input-group--disabled .input-group__selections__comma {
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.btn {
+    text-transform: none;
+}
+
+.size_16x16 {
+    width: 16px  !important;
+    height: 16px !important;
+}
+
+.theme--dark .btn.btn--disabled .icon, .application .theme--dark.btn.btn--disabled .icon {
+    color: rgba(255, 255, 255, .8) !important;
+}
+.tabs__div {
+    font-size: 12px;
+}
+
+.text-upper{
+    text-transform: uppercase;
+}
+
+.el-date-picker{
+    font-family: Roboto;
+    font-size:14px;
+}
+.input-group--text-field.input-group--textarea textarea {
+    font-size: 12px;
+}
+
+.theme--light .btn-toggle .btn, .application .theme--light.btn-toggle .btn {
+    color: black;
+    opacity: 0.7;
+}
+
+.theme--light .btn.btn--disabled, .application .theme--light.btn.btn--disabled {
+    color: rgba(0, 0, 0, .6) !important;
+}
+
+.input-group__input {
+ border: 1px solid #e1e1e1;
+}
+
+.checkbox .input-group__input {
+    border: 0px solid #e1e1e1;
+}
+.input-group--select label{
+    margin-left:10px;
+}
+
+.theme--light .input-group.input-group--textarea:not(.input-group--full-width) .input-group__input, .application .theme--light.input-group.input-group--textarea:not(.input-group--full-width) .input-group__input {
+    border: 1px solid #e1e1e1;
+}
+
+nav.extradense.toolbar .toolbar__title {height:25px !important;margin:0;padding-left:2px}
+nav.extradense.toolbar {height:25px !important;margin:0;padding:0}
+nav.extradense.toolbar .toolbar__content{height:25px !important;margin:0;padding:0}
+
+nav.toolbar--dense .toolbar__content {height:40px !important;}
+nav.toolbar--dense .toolbar__title {font-size: 18px !important;}
+.el-input{font-size:12px; border-radius: 2px}
+.el-input input,.el-input__prefix {color: rgba(0, 0, 0, .87);}
+
+
+table.table thead tr, table.table tbody td, table.table tbody th {
+    height: 40px;
+}
+
+nav.toolbar {
+    border-radius: 4px 4px 0px 0px
+}
+
+table.table tbody td {
+    font-size: 12px;
+}
+
+.input-group--text-field-box .input-group__input, .input-group__input {
+    min-height: 28px;
+}
+
+.el-input__inner{height:30px}
+.el-input__icon{line-height: 0px}
+
+.Password__field{
+    padding: 6px;
+}
+.Password__badge{
+    font-size:12px !important;
+    height: 18px !important;
+    padding-left:10px !important;
+}
