@@ -71,7 +71,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Privacy manager',
+    title: 'Procedimenti',
     meta: [
 
       { charset: 'utf-8' },
@@ -91,8 +91,6 @@ module.exports = {
   plugins: [
     { src: '~plugins/vue-router-sync', ssr: false },
     '~/plugins/vuetify.js',
-    '~/plugins/element-ui.js',
-    '~/plugins/vue-wysiwyg.js',
     { src: '~plugins/i18n.js', injectAs: 'i18n' }
   ],
   css: [

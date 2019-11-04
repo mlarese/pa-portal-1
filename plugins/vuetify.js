@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import colors from 'vuetify/es5/util/colors'
 import Notifications from 'vue-notification'
-import DataOneIcon from '../components/Icons/DataOneIcon'
-import MmEye from '../components/Icons/MmEye'
 import {dmy, time, dmySt} from '../assets/filters'
 import VueClipboards from 'vue-clipboards'
 import VueUpload from '@websanova/vue-upload/src/index'
@@ -42,13 +40,6 @@ import {
   VCheckbox
 } from 'vuetify'
 import VuePlaceAutocomplete from 'vue-place-autocomplete'
-import VueChartkick from 'vue-chartkick'
-import Chart from 'highcharts' // 'highcharts' // 'chart.js'
-import BiChart from '../components/Bi/BiChart'
-
-Vue.use(VueChartkick, {adapter: Chart})
-
-Vue.use(BiChart)
 
 Vue.use(VuePlaceAutocomplete)
 Vue.use(VueClipboards)
@@ -97,9 +88,6 @@ Vue.use(Vuetify, {
 
 Vue.use(Notifications)
 Vue.use(VueUpload)
-
-Vue.component('data-one-icon', DataOneIcon)
-Vue.component('mm-eye', MmEye)
 
 Vue.filter('dmy', dmy)
 Vue.filter('time', time)

@@ -1,7 +1,9 @@
 import axios from 'axios'
 import { setupCache } from 'axios-cache-adapter'
 import {apiEndpoint} from './endpoint'
-// import './mocks'
+import mock from './mocks'
+
+console.log
 // import mock in dev mod only
 
 export const notifyError = (err, translate = null) => {
@@ -43,7 +45,7 @@ const instance = axios.create({
   baseURL,
   adapter: cache.adapter,
   clearOnError: true,
-  timeout: 900000, // was 9000
+  timeout: 9000,
   headers: {'Content-Type': 'application/json'},
   withCredentials: true
 })

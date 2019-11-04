@@ -4,5 +4,6 @@ if (process.env.NODE_ENV === 'development' || window.location.hostname === 'loca
   baseURL = 'http://192.168.1.86/api'
   baseURL = 'http://localhost/api'
 }
+// /maingestWeb/maingest/maingest/getentiutentelist
 
 export const apiEndpoint = baseURL

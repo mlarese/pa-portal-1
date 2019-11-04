@@ -23,7 +23,7 @@
     >
       <v-toolbar-title style="width: 600px" class="ml-0 pl-3">
         <v-toolbar-side-icon class="side-icon" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-        <data-one-icon style="width:100px;display:inline-block;position: relative;top:8px" v-if="!drawer" />
+
 
       </v-toolbar-title>
 
@@ -46,21 +46,11 @@
 </template>
 
 <script>
-  import RoleMenu from '../components/General/RoleMenu'
-  import {mapState} from 'vuex'
-
   export default {
     watch: {
       'notification.id' (val) {
         this.$notify(this.notification)
       }
-    },
-    components: {
-      RoleMenu
-    },
-    computed: {
-      ...mapState('api', ['notification']),
-      ...mapState('app', ['ui'])
     },
     methods: {
       onLogOut () {
