@@ -265,9 +265,7 @@ table.table tbody td {
     font-size: 12px;
 }
 
-.input-group--text-field-box .input-group__input, .input-group__input {
-    min-height: 28px;
-}
+
 
 .el-input__inner{height:30px}
 .el-input__icon{line-height: 0px}
@@ -279,4 +277,7 @@ table.table tbody td {
     font-size:12px !important;
     height: 18px !important;
     padding-left:10px !important;
+}
+.input-group--select .input-group__input {
+    padding-left: 16px;
 }

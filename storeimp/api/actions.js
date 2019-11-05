@@ -1,10 +1,6 @@
-import axios from 'axios'
-import { setupCache } from 'axios-cache-adapter'
-import {apiEndpoint} from './endpoint'
-import mock from './mocks'
-
-console.log
-// import mock in dev mod only
+import {apiEndpoint as baseURL} from './endpoint'
+import {instance} from './axios-instance'
+require('./mocks')
 
 export const notifyError = (err, translate = null) => {
   let text = 'Error'
@@ -29,27 +25,6 @@ export const notifyError = (err, translate = null) => {
 
 export const notifySuccess = ({title, text}) => ({title, text, type: 'success'})
 
-/**
-let baseURL = window.location.protocol + '//' + window.location.host + '/api'
-
-if (process.env.NODE_ENV === 'development' || window.location.hostname === 'localhost') {
-  baseURL = 'http://192.168.1.86/api'
-  baseURL = 'http://localhost/api'
-}
-*/
-
-const baseURL = apiEndpoint
-const cache = setupCache({ maxAge: 1 * 60 * 1000 })
-
-const instance = axios.create({
-  baseURL,
-  adapter: cache.adapter,
-  clearOnError: true,
-  timeout: 9000,
-  headers: {'Content-Type': 'application/json'},
-  withCredentials: true
-})
-
 export const apiBaseUrl = baseURL
 
 export const actions = {
@@ -57,7 +32,7 @@ export const actions = {
     commit('error')
     commit('hasError')
   },
-  get ({commit, getters}, {url, options = {}, debug = false}) {
+  get ({commit, getters}, {url, options = {}, debug = true}) {
     commit('isAjax', true)
     commit('error')
     commit('hasError')
@@ -69,6 +44,7 @@ export const actions = {
     if (debug) {
       console.log(baseURL + url, options)
     }
+
     return instance.get(url, options)
       .then(res => {
         commit('isAjax')
@@ -89,7 +65,6 @@ export const actions = {
     commit('error')
     commit('hasError')
 
-    cache.store.clear()
     return instance.post(url, data, options)
       .then(res => {
         commit('isAjax')
@@ -108,7 +83,7 @@ export const actions = {
     commit('isAjax', true)
     commit('error')
     commit('hasError')
-    cache.store.clear()
+
     return instance.put(url, data, options)
       .then(res => {
         commit('isAjax')
@@ -127,7 +102,7 @@ export const actions = {
     commit('isAjax', true)
     commit('error')
     commit('hasError')
-    cache.store.clear()
+
     return instance.delete(url, options)
       .then(res => {
         commit('isAjax')

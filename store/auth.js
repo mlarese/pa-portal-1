@@ -28,13 +28,23 @@ export const mutations = {
 }
 
 export const actions = {
-  loadEnti ({commit, state, dispatch}, username) {
-    return dispatch('api/post', {
-      data: {username},
-      url: `/maingestWeb/maingest/maingest/getentiutentelist`
+  doLogin ({commit, state, dispatch}, {username, ente, password}) {
+    const url = '/maingest/dologin'
+    return dispatch('api/get', {
+      options: {params: {username, ente, password}},
+      url
     }, {root: true})
       .then(resp => {
-        commit(resp.data)
+        commit('setUser', resp.data)
+      })
+  },
+  loadEnti ({commit, state, dispatch}, username) {
+    return dispatch('api/get', {
+      options: {params: {username}},
+      url: `/maingest/getentiutentelist`
+    }, {root: true})
+      .then(resp => {
+        commit('setEnti', resp.data)
       })
   }
 }

@@ -63,3 +63,9 @@
     })
   }
 </script>
+
+<style>
+  .input-group--select .input-group__input {
+    padding: 12px !important;
+  }
+</style>

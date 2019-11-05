@@ -1,7 +1,7 @@
 {
-  "name": "mmoneprivacy",
+  "name": "pa-privacy",
   "version": "1.0.0",
-  "description": "privacy manager",
+  "description": "pa privacy",
   "author": "maurolarese",
   "private": true,
   "scripts": {
