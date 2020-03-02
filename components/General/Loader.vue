@@ -1,6 +1,6 @@
 <template>
     <div class="loading-page" v-if="loading">
-        <mm-eye />
+
     </div>
 </template>
 

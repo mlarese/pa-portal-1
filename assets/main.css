@@ -37,9 +37,6 @@ a, a:link, a:visited, a:active, a:hover {
     font-size: 12px;
 }
 
-.toolbar__side-icon .icon {
-    font-size: 20px !important;
-}
 
 .input-group--text-field input,
 .input-group--text-field textarea {
@@ -280,4 +277,13 @@ table.table tbody td {
 }
 .input-group--select .input-group__input {
     padding-left: 16px;
+}
+
+
+.list__tile__action {
+    min-width: 30px;
+}
+
+.theme--light .list  {
+    background: transparent;
 }

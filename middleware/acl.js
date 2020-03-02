@@ -3,5 +3,14 @@
 // import {getSchema} from '../assets/helpers'
 
 export default async function ({route, store, redirect, app}) {
-  console.log('-- acl')
+  if (!route.name) {
+    return redirect('/login')
+  } else if (route.name !== 'login') {
+    if (!store.state.auth.user) {
+      return redirect('/login')
+    }
+    if (!store.state.auth.user.logged) {
+      return redirect('/login')
+    }
+  }
 }

@@ -1,6 +1,12 @@
 <template>
     <v-layout align-center justify-center class="login">
         <v-flex xs12 sm8 md4>
+            <v-toolbar color="light-blue darken-4" dark>
+                <v-toolbar-side-icon>
+                    <v-icon medium>laptop_windows</v-icon>
+                </v-toolbar-side-icon>
+                <v-toolbar-title>{{title}}</v-toolbar-title>
+            </v-toolbar>
             <v-card class="elevation-3">
                 <v-card-text>
                     <v-form>
@@ -23,15 +29,21 @@
 
 </template>
 <script>
-  import {mapState, mapActions, mapMutations} from 'vuex'
+  import {mapState, mapActions, mapMutations, mapGetters} from 'vuex'
   // import {notifyError} from '../../storeimp/api/actions'
 
   export default {
     layout: 'empty',
+    watch: {
+      isLogged () {
+
+      }
+    },
     computed: {
-      ...mapState('app', ['title']),
+      ...mapState('app', ['title', 'logo']),
       ...mapState('api', ['isAjax']),
       ...mapState('auth', {entiList: 'enti'}),
+      ...mapGetters('auth', ['isLogged']),
       canLogin () {
         if (!this.ente) {
           return false
@@ -73,22 +85,19 @@
         if (!this.canLogin) {
           return
         }
+
         this.doLogin(this)
+          .then(res => {
+            this.$router.push('/')
+            console.log('--- route home')
+          })
         // this.$store.commit('api/notification', notifyError(e, this.$t), {root: true})
       }
     }
   }
 </script>
 <style>
-    .login .icon {
-            align-items: center;
-            display: inline-flex;
-            font-size: 20px !important;
-            vertical-align: bottom;
-     }
 
-    .login    .input-group--text-field input {
-            height: 40px !important ;
-    }
+
 
 </style>

@@ -1,7 +1,7 @@
 <template>
-  <v-app id="inspire" class="grey lighten-2">
-    <notifications position="top right" style="margin-top:50px"/>
-    <v-content>
+  <v-app class="grey lighten-2">
+    <notifications position="top right" />
+    <v-content class="empty-content">
       <v-container fluid fill-height>
         <nuxt />
       </v-container>
@@ -23,3 +23,11 @@
     }
   }
 </script>
+
+<style>
+  .empty-content.content{
+    background: url(../assets/img/conegliano_sfondo.jpg)  center center no-repeat;
+    background-size: 2000px;
+  }
+
+</style>

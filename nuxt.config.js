@@ -14,58 +14,17 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/auth'
   ],
-  auth: {
-    redirect: {
+  _auth: {
+    redirect_: {
       logout: '/login',
       callback: '/callback'
     },
-    resetOnError: true,
-    strategies: {
-      dev: {
-        _scheme: 'local',
-        endpoints: {
-          login: { baseURL: 'http://localhost', url: '/api/auth/login', method: 'post', propertyName: 'token' },
-          logout: {baseURL: 'http://localhost', url: '/api/auth/logout', method: 'post' },
-          user: {baseURL: 'http://localhost', url: '/api/auth/user', method: 'get', propertyName: 'user' }
-        },
-        tokenRequired: true,
-        tokenType: 'bearer'
-      },
-      devip: {
-        _scheme: 'local',
-        endpoints: {
-          login: { baseURL: 'http://192.168.1.86', url: '/api/auth/login', method: 'post', propertyName: 'token' },
-          logout: {baseURL: 'http://192.168.1.86', url: '/api/auth/logout', method: 'post' },
-          user: {baseURL: 'http://192.168.1.86', url: '/api/auth/user', method: 'get', propertyName: 'user' }
-        },
-        tokenRequired: true,
-        tokenType: 'bearer'
-      },
-      prod: {
-        _scheme: 'local',
-        endpoints: {
-          login: { baseURL: '/', url: '/api/auth/login', method: 'post', propertyName: 'token' },
-          logout: {baseURL: '/', url: '/api/auth/logout', method: 'post' },
-          user: {baseURL: '/', url: '/api/auth/user', method: 'get', propertyName: 'user' }
-        },
-        tokenRequired: true,
-        tokenType: 'bearer'
-      },
-      local: {
-        endpoints: {
-          login: { baseURL: 'http://localhost', url: '/api/auth/login', method: 'post', propertyName: 'token' },
-          logout: {baseURL: 'http://localhost', url: '/api/auth/logout', method: 'post' },
-          user: {baseURL: 'http://localhost', url: '/api/auth/user', method: 'get', propertyName: 'user' }
-        },
-        tokenRequired: true,
-        tokenType: 'bearer'
-      }
-    }
+    resetOnError: true
   },
   router: {
     mode: 'hash',
     base: routerBase,
-    middleware: ['acl', 'auth']
+    middleware: ['acl']
   },
   /*
   ** Headers of the page
