@@ -11,6 +11,10 @@
       }
     },
     layout: 'empty',
-    components: {Login}
+    components: {Login},
+    fetch ({store}) {
+      // store.dispatch('auth/loadMenu', null, {root: true})
+      // store.dispatch('auth/loadEnti', 'davide', {root: true})
+    }
   }
 </script>

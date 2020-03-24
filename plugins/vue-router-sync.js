@@ -9,4 +9,14 @@ if (process.env.NODE_ENV === 'development') {
 
 export default ({app: {router, store}}) => {
   sync(store, router)
+
+  window.closeSubApp = function () {
+    router.push('/')
+    store.commit('app/setDrawerLeft', true, {root: true})
+  }
+
+  window.redirectToMenu = function () {
+    router.push('/')
+    store.commit('app/setDrawerLeft', true, {root: true})
+  }
 }

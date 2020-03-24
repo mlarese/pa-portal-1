@@ -6,6 +6,8 @@ export const state = () => ({
   version: '1.1.3',
   debugMode: false,
   ui: {
+    currentAppSrc: '',
+    drawerLeft: true,
     drawerRight: false,
     burgerRight: false
   }
@@ -13,6 +15,7 @@ export const state = () => ({
 })
 
 export const mutations = {
+  setDrawerLeft (state, payload) { state.ui.drawerLeft = payload },
   setDrawerRight (state, payload) { state.ui.drawerRight = payload },
   setBurgerRight (state, payload) {
     state.ui.burgerRight = payload

@@ -1,5 +1,5 @@
 export const state = () => ({
-  userName: null,
+  userName: '',
   menu: [],
   user: {
     'logged': false,
@@ -14,6 +14,20 @@ export const state = () => ({
 })
 
 export const mutations = {
+  resetAll (s) {
+    s.userName = ''
+    s.enti = []
+    s.menu = []
+    s.user = {
+      'logged': false,
+      'descuser': '',
+      'descente': '',
+      'urlNow': '',
+      'iduser': 0,
+      'idente': 0,
+      'error': ''
+    }
+  },
   setUserName (s, p) {
     s.userName = p
   },
@@ -44,12 +58,18 @@ export const actions = {
       })
   },
   loadMenu ({dispatch, commit, state}) {
-    const {iduser, idente} = state.user
-    const url = `/maingest/getusermenu`
+    let {iduser, idente} = state.user
+    idente = state.enti[idente].id_ente
 
+    const url = `/maingest/getusermenu`
     dispatch('api/get', {url, options: {params: {iduser, idente}}}, {root: true})
       .then(mnu => {
-        commit('setMenu', mnu.data)
+        let menu = []
+
+        for (let mnuItem of mnu.data) {
+          menu.push({...mnuItem})
+        }
+        commit('setMenu', menu)
       })
   },
   loadEnti ({commit, state, dispatch}, username) {
@@ -64,6 +84,10 @@ export const actions = {
 }
 
 export const getters = {
+  getDescente: s => {
+    if (s.enti && s.enti.length > 0) return s.enti[0].descente
+    return ''
+  },
   isLogged: state => {
     if (!state.user) return false
     return state.user.logged

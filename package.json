@@ -131,6 +131,7 @@
     "sass-loader": "^6.0.6",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
+    "vue-friendly-iframe": "^0.17.0",
     "vue-svgicon": "^2.1.3"
   }
 }

@@ -1,7 +1,5 @@
 <template>
-  <v-app>
-
-
+  <v-app class="default-layout">
     <notifications position="top right" />
     <v-navigation-drawer
             fixed
@@ -13,16 +11,7 @@
           >
 
 
-        <v-list dense>
-            <v-list-tile @click="" v-for="(item, index) in menu" :key="index">
-                <v-list-tile-action>
-                    <v-icon medium>arrow_right</v-icon>
-                </v-list-tile-action>
-                <v-list-tile-content>
-                    <v-list-tile-title style="font-size:16px">{{item.descr_modulo}}</v-list-tile-title>
-                </v-list-tile-content>
-            </v-list-tile>
-        </v-list>
+        <Menu />
 
     </v-navigation-drawer>
 
@@ -45,10 +34,14 @@
                 <span>{{title}}</span>
 
               </v-toolbar-title>
+
+              <!--v-btn @click="onClose">close</v-btn-->
           </v-flex>
 
 
-          <v-flex sm4 class="text-xs-center mt-1"> <span class="headline"><b>{{user.descente}}</b></span></v-flex>
+          <v-flex sm4 class="text-xs-center mt-1">
+              <span class="headline"><b>{{getDescente}}</b></span>
+          </v-flex>
 
           <v-flex sm4 class="text-xs-right">
 
@@ -71,7 +64,7 @@
     </v-toolbar>
     <v-content>
 
-      <v-container fluid class="pa-2"  >
+      <v-container fill-height fluid class="pa-0 ma-0"  >
         <nuxt />
       </v-container>
     </v-content>
@@ -80,41 +73,38 @@
 </template>
 
 <script>
-  import {mapState} from 'vuex'
+  import {mapState, mapMutations, mapGetters} from 'vuex'
+  import Menu from '../components/Menu/Menu'
   export default {
     watch: {
       'notification.id' (val) {
         this.$notify(this.notification)
       }
     },
+    components: {Menu},
     computed: {
-      ...mapState('app', ['ui', 'title', 'logo']),
-      ...mapState('auth', ['user', 'menu'])
+      ...mapState('app', ['ui', 'title', 'logo', 'drawerLeft']),
+      ...mapState('auth', ['user', 'menu', 'enti']),
+      ...mapGetters('auth', ['getDescente']),
+      drawer: {
+        get () { return this.ui.drawerLeft },
+        set (value) { return this.setDrawerLeft(value) }
+      }
     },
     methods: {
+      onClose () {
+        window.closeSubApp()
+      },
+      ...mapMutations('app', ['setDrawerLeft']),
+      ...mapMutations('auth', ['resetAll']),
       onLogOut () {
         this.$auth.logout()
+        this.resetAll()
         this.$router.push('/login')
       }
     },
     data: () => ({
-      dialog: false,
-      drawer: null
+      dialog: false
     })
   }
 </script>
-
-<style>
-  .input-group--select .input-group__input {
-    padding: 12px !important;
-  }
-  .navigation-drawer {
-      background: #f2f2f2 !important;
-  }
-  .content--wrap{
-      filter: blur(2px); -webkit-filter: blur(2px);
-      background: url(../assets/img/comune_conegliano.jpg)  center center;
-      background-repeat: no-repeat;
-      background-size: 300x ;
-  }
-</style>

@@ -1,5 +1,5 @@
 <template>
-  <v-app class="grey lighten-2">
+  <v-app class="grey lighten-2 empty-layout">
     <notifications position="top right" />
     <v-content class="empty-content">
       <v-container fluid fill-height>

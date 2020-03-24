@@ -5,7 +5,7 @@ console.clear()
 console.log('-------', process.env.NODE_ENV)
 let routerBase = '/'
 if (process.env.NODE_ENV === 'production') {
-  routerBase = '/manager/'
+  routerBase = '/maingest/'
 }
 
 module.exports = {
@@ -38,6 +38,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'privacy manager' }
     ],
     script: [
+      { type: 'text/javascript', src: 'js/globals.js'},
       { type: 'text/javascript', src: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAhSv9zWvisiTXRPRw6K8AE0DCmrRMpQcU&libraries=places'}
     ],
     link: [

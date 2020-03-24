@@ -1,6 +1,6 @@
 import {apiEndpoint as baseURL} from './endpoint'
 import {instance} from './axios-instance'
-require('./mocks')
+// require('./mocks')
 
 export const notifyError = (err, translate = null) => {
   let text = 'Error'
@@ -32,7 +32,7 @@ export const actions = {
     commit('error')
     commit('hasError')
   },
-  get ({commit, getters}, {url, options = {}, debug = true}) {
+  get ({commit, getters}, {url, options = {}, debug = false}) {
     commit('isAjax', true)
     commit('error')
     commit('hasError')

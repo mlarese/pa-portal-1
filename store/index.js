@@ -11,6 +11,6 @@ export const mutations = {
     state.sidebar = !state.sidebar
   }
 }
-
+export const strict = false
 export const getters = make.getters(state)
 export const plugins = [ pathify.plugin ]

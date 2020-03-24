@@ -4,6 +4,7 @@ import Notifications from 'vue-notification'
 import {dmy, time, dmySt} from '../assets/filters'
 import VueClipboards from 'vue-clipboards'
 import VueUpload from '@websanova/vue-upload/src/index'
+import VueFriendlyIframe from 'vue-friendly-iframe'
 
 import {
   Vuetify,
@@ -88,6 +89,7 @@ Vue.use(Vuetify, {
 
 Vue.use(Notifications)
 Vue.use(VueUpload)
+Vue.use(VueFriendlyIframe)
 
 Vue.filter('dmy', dmy)
 Vue.filter('time', time)
