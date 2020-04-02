@@ -53,6 +53,11 @@ export const actions = {
       url
     }, {root: true})
       .then(resp => {
+        if (!resp.data.logged) {
+          alert('Utente o password non corretta')
+          return
+        }
+
         commit('setUser', resp.data)
         return dispatch('loadMenu')
       })
@@ -79,6 +84,9 @@ export const actions = {
     }, {root: true})
       .then(resp => {
         commit('setEnti', resp.data)
+      })
+      .catch(e => {
+        console.log(e)
       })
   }
 }

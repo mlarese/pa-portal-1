@@ -100,6 +100,7 @@
       onLogOut () {
         this.$auth.logout()
         this.resetAll()
+        this.setDrawerLeft(true)
         this.$router.push('/login')
       }
     },
