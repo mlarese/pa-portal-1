@@ -1,1 +1,5 @@
-[{"descente":"Comune di Conegliano","id_ente":1,"f_superuser":false,"id_user":13}]
+[
+  {"descente":"Comune di Conegliano","id_ente":1,"f_superuser":false,"id_user":13},
+  {"descente":"Ente 2","id_ente":10,"f_superuser":false,"id_user":13},
+  {"descente":"Ente 3","id_ente":100,"f_superuser":false,"id_user":13}
+]

@@ -11,7 +11,7 @@
     </v-list>
 </template>
 <script>
-  import {mapState} from 'vuex'
+  import {mapState, mapGetters} from 'vuex'
   export default {
     components: {},
     props: [],
@@ -23,7 +23,7 @@
       },
       prepareLink (item) {
         const {descuser, iduser} = this.user
-        const idente = this.enti[0].id_ente
+        const idente = this.getCurEnte.id_ente
         const url = `${item.gui_acl}?origin=${this.origin}&ente=${idente}&user=${iduser}&descuser=${descuser}`
         return url
       }
@@ -32,6 +32,7 @@
       origin () {
         return 'javascript:parent.closeSubApp()'
       },
+      ...mapGetters('auth', ['getCurEnte']),
       ...mapState('auth', ['menu', 'user']),
       ...mapState('app', ['ui']),
       ...mapState('auth', ['enti'])

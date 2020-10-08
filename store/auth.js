@@ -49,7 +49,7 @@ export const actions = {
   doLogin ({commit, state, dispatch}, {username, ente, password}) {
     const url = '/maingest/dologin'
     return dispatch('api/get', {
-      options: {params: {username, ente, password}},
+      options: {params: {username, idente: ente, password}},
       url
     }, {root: true})
       .then(resp => {
@@ -64,6 +64,8 @@ export const actions = {
   },
   loadMenu ({dispatch, commit, state}) {
     let {iduser, idente} = state.user
+
+    idente = 0
     idente = state.enti[idente].id_ente
 
     const url = `/maingest/getusermenu`
@@ -93,8 +95,20 @@ export const actions = {
 
 export const getters = {
   getDescente: s => {
-    if (s.enti && s.enti.length > 0) return s.enti[0].descente
-    return ''
+    if (s.enti && s.enti.length > 0 && s.user.idente > 0) {
+      const idx = s.enti.findIndex(obj => obj.id_ente === s.user.idente)
+      return s.enti[idx].descente
+    } else {
+      return ''
+    }
+  },
+  getCurEnte: s => {
+    if (s.enti && s.enti.length > 0 && s.user.idente > 0) {
+      const idx = s.enti.findIndex(obj => obj.id_ente === s.user.idente)
+      return s.enti[idx]
+    } else {
+      return {}
+    }
   },
   isLogged: state => {
     if (!state.user) return false
