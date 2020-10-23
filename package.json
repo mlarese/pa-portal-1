@@ -21,7 +21,7 @@
     "@websanova/vue-upload": "^1.2.3-beta",
     "ajv": "^6.4.0",
     "alasql": "^0.4.11",
-    "axios": "^0.16.2",
+    "axios": "^0.18.1",
     "axios-cache-adapter": "^2.1.1",
     "axios-mock-adapter": "^1.15.0",
     "babel-plugin-istanbul": "^4.1.6",
